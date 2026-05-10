@@ -1,65 +1,121 @@
 import Image from "next/image";
+import Link from "next/link";
+import { howToPlaySteps, site } from "./content";
+
+const featureCards = [
+  {
+    title: "LAN interface",
+    copy: "Creates a local network entry so traditional Bedrock devices can find the private server from their LAN or Friends screen.",
+  },
+  {
+    title: "Bedrock servers",
+    copy: "Connects directly to Bedrock-compatible servers using the server domain name and port.",
+  },
+  {
+    title: "Java servers",
+    copy: "Works with plugin-enabled Java servers such as Paper or Purpur when GeyserMC and Floodgate are installed.",
+  },
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+    <main>
+      <section className="hero">
+        <div className="site-shell hero__inner">
+          <div className="hero__content">
+            <p className="eyebrow">LAN bridge for Minecraft Bedrock devices</p>
+            <h1>{site.name}</h1>
+            <p className="hero__copy">{site.description}</p>
+            <div className="hero__actions" aria-label="Important pages">
+              <Link className="button button--primary" href="/privacy-policy">
+                Privacy Policy
+              </Link>
+              <Link className="button button--secondary" href="/support">
+                Support
+              </Link>
+            </div>
+          </div>
+
+          <div className="hero__visual" aria-hidden="true">
+            <div className="signal-ring signal-ring--one" />
+            <div className="signal-ring signal-ring--two" />
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+              src="/javarock-icon.png"
+              alt=""
+              width={220}
+              height={220}
+              priority
+              className="hero__logo"
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      <section className="section section--white">
+        <div className="site-shell">
+          <div className="section-heading">
+            <p className="eyebrow">What it does</p>
+            <h2>A focused bridge tool for private Minecraft servers.</h2>
+            <p>
+              JavaRock helps devices that cannot normally add custom private servers, including
+              iPad, Xbox, and PlayStation, discover a server through your Android phone on the same
+              Wi-Fi network.
+            </p>
+          </div>
+          <div className="feature-grid">
+            {featureCards.map((feature) => (
+              <article className="feature-card" key={feature.title}>
+                <h3>{feature.title}</h3>
+                <p>{feature.copy}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section section--soft">
+        <div className="site-shell split-section">
+          <div>
+            <p className="eyebrow">How access works</p>
+            <h2>The Android app and Bedrock device must be on the same network.</h2>
+          </div>
+          <div className="steps">
+            <div>
+              <span>01</span>
+              <p>The user receives a username and password separately from the JavaRock admin.</p>
+            </div>
+            <div>
+              <span>02</span>
+              <p>The first successful login assigns those credentials to the smartphone being used.</p>
+            </div>
+            <div>
+              <span>03</span>
+              <p>The phone creates the LAN bridge, and the iPad, Xbox, or PlayStation joins from the same Wi-Fi.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section section--white">
+        <div className="site-shell">
+          <div className="section-heading">
+            <p className="eyebrow">How to play</p>
+            <h2>Start Minecraft and join the LAN World from Worlds.</h2>
+            <p>
+              Once JavaRock is running, the Bedrock device joins just like a local multiplayer world
+              on the same Wi-Fi network.
+            </p>
+          </div>
+          <div className="page-grid">
+            {howToPlaySteps.map((step) => (
+              <article className="play-card" key={step.title}>
+                <span>{step.title}</span>
+                <p>{step.copy}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }

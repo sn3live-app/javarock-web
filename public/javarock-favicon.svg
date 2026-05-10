@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">JavaRock JR Favicon</title>
+  <desc id="desc">A Minecraft-inspired vector favicon with a grass block cube and bold JR lettering.</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#111827"/>
+      <stop offset="1" stop-color="#050505"/>
+    </linearGradient>
+    <linearGradient id="grassTop" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7fd13b"/>
+      <stop offset="1" stop-color="#2f8a25"/>
+    </linearGradient>
+    <linearGradient id="dirtLeft" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8a5328"/>
+      <stop offset="1" stop-color="#4b2a16"/>
+    </linearGradient>
+    <linearGradient id="dirtRight" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6d3d1e"/>
+      <stop offset="1" stop-color="#2f1a0d"/>
+    </linearGradient>
+    <linearGradient id="stone" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f2f2f2"/>
+      <stop offset="0.5" stop-color="#b8bec4"/>
+      <stop offset="1" stop-color="#737b83"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffe066"/>
+      <stop offset="0.45" stop-color="#f3b51c"/>
+      <stop offset="1" stop-color="#a86908"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="10" flood-color="#000" flood-opacity="0.45"/>
+    </filter>
+    <filter id="letterShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="8" dy="8" stdDeviation="0" flood-color="#000" flood-opacity="0.55"/>
+      <feDropShadow dx="0" dy="5" stdDeviation="4" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- App icon background -->
+  <rect x="16" y="16" width="480" height="480" rx="92" fill="url(#bg)"/>
+  <rect x="24" y="24" width="464" height="464" rx="84" fill="none" stroke="#2f3744" stroke-width="4" opacity="0.65"/>
+
+  <!-- Isometric block -->
+  <g filter="url(#shadow)">
+    <!-- cube faces -->
+    <polygon points="256,70 412,144 256,218 100,144" fill="url(#grassTop)"/>
+    <polygon points="100,144 256,218 256,384 100,310" fill="url(#dirtLeft)"/>
+    <polygon points="412,144 256,218 256,384 412,310" fill="url(#dirtRight)"/>
+
+    <!-- dark outline -->
+    <polyline points="256,70 412,144 412,310 256,384 100,310 100,144 256,70" fill="none" stroke="#020202" stroke-width="14" stroke-linejoin="round"/>
+    <polyline points="100,144 256,218 412,144" fill="none" stroke="#020202" stroke-width="10" stroke-linejoin="round" opacity="0.9"/>
+    <line x1="256" y1="218" x2="256" y2="384" stroke="#020202" stroke-width="10" opacity="0.9"/>
+
+    <!-- grass edge drips -->
+    <polygon points="100,144 256,218 256,252 230,240 230,272 199,257 199,230 169,216 169,246 140,232 140,201 100,182" fill="#2f8a25"/>
+    <polygon points="412,144 256,218 256,252 284,239 284,267 314,253 314,224 348,208 348,241 381,225 381,193 412,178" fill="#236d20"/>
+
+    <!-- pixel patches top -->
+    <rect x="166" y="110" width="26" height="20" transform="rotate(25 179 120)" fill="#9bea52" opacity="0.8"/>
+    <rect x="242" y="94" width="34" height="24" transform="rotate(25 259 106)" fill="#5eb72e" opacity="0.9"/>
+    <rect x="300" y="126" width="32" height="22" transform="rotate(25 316 137)" fill="#8ada45" opacity="0.75"/>
+    <rect x="213" y="144" width="30" height="22" transform="rotate(25 228 155)" fill="#3c9828" opacity="0.85"/>
+    <rect x="132" y="151" width="34" height="18" transform="rotate(25 149 160)" fill="#72c63a" opacity="0.75"/>
+    <rect x="346" y="158" width="30" height="18" transform="rotate(25 361 167)" fill="#4aa42c" opacity="0.75"/>
+
+    <!-- dirt/stone pixels left -->
+    <rect x="124" y="204" width="32" height="30" fill="#9b6330" opacity="0.8"/>
+    <rect x="166" y="240" width="28" height="32" fill="#6d3f22" opacity="0.9"/>
+    <rect x="204" y="280" width="34" height="34" fill="#a66a35" opacity="0.65"/>
+    <rect x="116" y="276" width="36" height="34" fill="#777e84" opacity="0.85"/>
+    <rect x="158" y="312" width="44" height="30" fill="#545a5f" opacity="0.75"/>
+
+    <!-- dirt/stone pixels right -->
+    <rect x="352" y="202" width="34" height="32" fill="#7b4722" opacity="0.85"/>
+    <rect x="310" y="242" width="32" height="34" fill="#4a2815" opacity="0.7"/>
+    <rect x="266" y="286" width="34" height="34" fill="#8d552b" opacity="0.68"/>
+    <rect x="360" y="284" width="38" height="34" fill="#555b60" opacity="0.78"/>
+    <rect x="306" y="322" width="44" height="28" fill="#34383c" opacity="0.78"/>
+  </g>
+
+  <!-- Big JR letters, built as blocky vector paths -->
+  <g filter="url(#letterShadow)">
+    <!-- J outline -->
+    <path d="M145 184 H248 V224 H218 V332 C218 377 187 406 140 406 H111 C73 406 47 382 47 344 V316 H94 V341 C94 354 102 362 116 362 H141 C159 362 169 350 169 330 V224 H145 Z" fill="#070707"/>
+    <!-- J fill -->
+    <path d="M156 196 H234 V213 H204 V331 C204 367 181 391 141 391 H113 C84 391 62 374 62 345 V328 H83 V344 C83 362 95 375 115 375 H141 C169 375 187 357 187 330 V213 H156 Z" fill="url(#stone)"/>
+    <!-- J highlights/pixels -->
+    <rect x="162" y="202" width="24" height="17" fill="#ffffff" opacity="0.45"/>
+    <rect x="190" y="224" width="14" height="42" fill="#e4e7eb" opacity="0.35"/>
+    <rect x="92" y="359" width="30" height="16" fill="#f7f7f7" opacity="0.35"/>
+    <rect x="154" y="374" width="22" height="14" fill="#7e858c" opacity="0.35"/>
+
+    <!-- R outline -->
+    <path d="M259 184 H365 C424 184 462 220 462 274 C462 309 444 337 413 350 L472 406 H407 L358 358 H309 V406 H259 Z M309 225 V316 H358 C392 316 411 299 411 272 C411 244 392 225 358 225 Z" fill="#070707"/>
+    <!-- R fill -->
+    <path d="M274 197 H363 C413 197 446 228 446 274 C446 309 425 334 391 343 L443 391 H411 L363 344 H292 V391 H274 Z M292 214 V330 H360 C404 330 429 307 429 274 C429 238 404 214 360 214 Z" fill="url(#gold)"/>
+    <!-- R counter/hole -->
+    <path d="M321 238 H358 C382 238 397 252 397 274 C397 296 382 309 358 309 H321 Z" fill="#111111"/>
+    <path d="M335 253 H356 C370 253 379 261 379 274 C379 287 370 295 356 295 H335 Z" fill="#2a1b06" opacity="0.92"/>
+    <!-- R highlights/pixels -->
+    <rect x="285" y="204" width="52" height="16" fill="#fff2a0" opacity="0.42"/>
+    <rect x="396" y="230" width="20" height="37" fill="#ffd45b" opacity="0.4"/>
+    <rect x="293" y="336" width="36" height="16" fill="#c5810d" opacity="0.35"/>
+    <rect x="384" y="348" width="26" height="19" fill="#ffcf45" opacity="0.3"/>
+  </g>
+</svg>
