@@ -15,6 +15,10 @@ const featureCards = [
     title: "Java servers",
     copy: "Works with plugin-enabled Java servers such as Paper or Purpur when GeyserMC and Floodgate are installed.",
   },
+  {
+    title: "Secure access",
+    copy: "Checks admin-provided credentials through a Strapi backend hosted on Render.com, with backend-hashed device fingerprints stored in Supabase Postgres.",
+  },
 ];
 
 export default function Home() {
@@ -86,10 +90,14 @@ export default function Home() {
             </div>
             <div>
               <span>02</span>
-              <p>The first successful login assigns those credentials to the smartphone being used.</p>
+              <p>The app verifies access through a secure Strapi backend before the bridge can start.</p>
             </div>
             <div>
               <span>03</span>
+              <p>The first successful login assigns those credentials to the smartphone being used.</p>
+            </div>
+            <div>
+              <span>04</span>
               <p>The phone creates the LAN bridge, and the iPad, Xbox, or PlayStation joins from the same Wi-Fi.</p>
             </div>
           </div>

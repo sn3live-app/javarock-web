@@ -36,9 +36,19 @@ export default function PrivacyPolicyPage() {
         for ads, profiling, or tracking.
       </p>
       <p>
+        These device identifiers are hashed by the Android app before being sent to the backend. The
+        Strapi backend then applies an additional server-side HMAC-SHA-256 fingerprint before saving
+        the binding record in Supabase Postgres.
+      </p>
+      <p>
         The user enters a username and password provided separately by the JavaRock admin. Those
         credentials are used only to verify access and assign the login to the smartphone after first
         use.
+      </p>
+      <p>
+        Login credentials are verified by the JavaRock Strapi backend hosted on Render.com. Access
+        records are stored in Supabase Postgres, and passwords are stored as salted scrypt hashes
+        rather than readable plaintext.
       </p>
       <p>JavaRock does not collect:</p>
       <ul>
@@ -58,16 +68,25 @@ export default function PrivacyPolicyPage() {
 
       <h2>Data Sharing</h2>
       <p>
-        JavaRock does not sell user data and does not use user data for advertising. Device ID and
-        access-check data may be processed by the hosting and database providers used to run the
-        JavaRock access system.
+        JavaRock does not sell user data and does not use user data for advertising. Credential
+        verification data, backend-hashed device identifier fingerprints, and access-check records
+        may be processed by Render.com and Supabase only as needed to host the backend and database
+        for the JavaRock access system.
       </p>
 
       <h2>Security</h2>
       <p>
-        JavaRock uses HTTPS for backend communication where available and limits stored device data
-        to access-control purposes. No system can be guaranteed perfectly secure, but we use
-        reasonable safeguards for the type of data handled.
+        JavaRock uses HTTPS/TLS for app-to-backend communication. The backend is a Strapi CMS
+        service hosted on Render.com, which provides managed TLS certificates for hosted services.
+        Access records are stored in Supabase Postgres, which provides managed database security
+        controls such as authenticated database access and optional SSL enforcement.
+      </p>
+      <p>
+        Passwords are protected with salted scrypt hashing, access tokens are generated server-side,
+        device identifiers are stored as backend-generated HMAC-SHA-256 fingerprints, and the
+        Android app does not connect directly to the database. No system can be guaranteed perfectly
+        secure, but JavaRock uses reasonable technical and administrative safeguards for the limited
+        access-control data handled by the app.
       </p>
 
       <h2>Retention</h2>
