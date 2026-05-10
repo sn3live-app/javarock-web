@@ -5,7 +5,7 @@ export const site = {
     "JavaRock creates a local LAN interface so Bedrock devices like iPad, Xbox, and PlayStation can join approved private Minecraft servers.",
   supportEmail: "sn3.live@gmail.com",
   developer: "sn3live-app",
-  effectiveDate: "May 10, 2026",
+  effectiveDate: "May 11, 2026",
 };
 
 export const navItems = [

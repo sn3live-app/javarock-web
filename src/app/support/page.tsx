@@ -13,7 +13,7 @@ export default function SupportPage() {
     <LegalPage
       eyebrow="Help and troubleshooting"
       title="Support"
-      intro="Most JavaRock issues are caused by local network discovery, server compatibility, or device ID binding."
+      intro="Most JavaRock issues are caused by local network discovery, server compatibility, or device identifier binding."
     >
       <h2>Contact</h2>
       <p>
@@ -36,7 +36,8 @@ export default function SupportPage() {
       <h2>Device Binding</h2>
       <p>
         Username and password credentials are provided separately by the admin. After first use, the
-        login is assigned to that smartphone. If the device ID needs to be canceled, write to{" "}
+        login is assigned to that smartphone. If the device identifier needs to be canceled, write
+        to{" "}
         <a href={`mailto:${site.supportEmail}`}>{site.supportEmail}</a> or use the{" "}
         <Link href="/data-deletion">Data Deletion</Link> page.
       </p>

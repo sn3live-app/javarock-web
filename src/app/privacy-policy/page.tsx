@@ -25,9 +25,15 @@ export default function PrivacyPolicyPage() {
       <h2>Information We Collect</h2>
       <p>
         JavaRock does not collect personal profile data, server names, server domain names, server
-        IP addresses, or server port numbers. The only device data collected by the app is the
-        Android device ID, which is used to prevent the same login credentials from being reused on
+        IP addresses, or server port numbers. The only device data collected by the app is a hashed
+        device identifier, which is used to prevent the same login credentials from being reused on
         another smartphone.
+      </p>
+      <p>
+        To keep the same phone recognized across reinstallations and app builds, JavaRock first
+        checks for a Widevine device identifier, then the Android SSAID, and finally the Advertising
+        ID if the first two are unavailable. The Advertising ID is used only for access control, not
+        for ads, profiling, or tracking.
       </p>
       <p>
         The user enters a username and password provided separately by the JavaRock admin. Those
@@ -38,7 +44,7 @@ export default function PrivacyPolicyPage() {
       <ul>
         <li>Precise location.</li>
         <li>Contacts, photos, microphone recordings, or payment details.</li>
-        <li>Advertising identifiers or analytics tracking profiles.</li>
+        <li>Analytics tracking profiles.</li>
         <li>Minecraft account passwords.</li>
         <li>Server connection details such as server name, domain, IP address, or port.</li>
       </ul>
@@ -66,13 +72,14 @@ export default function PrivacyPolicyPage() {
 
       <h2>Retention</h2>
       <p>
-        Device ID binding information is kept while the login is authorized to use the app. It can
-        be canceled when access is no longer needed or when the user needs to move to another phone.
+        Device identifier binding information is kept while the login is authorized to use the app.
+        It can be canceled when access is no longer needed or when the user needs to move to another
+        phone.
       </p>
 
       <h2>Deletion Requests</h2>
       <p>
-        Users can request cancellation of the stored device ID from the{" "}
+        Users can request cancellation of the stored device identifier from the{" "}
         <Link href="/data-deletion">Data Deletion</Link> page or by writing to{" "}
         <a href={`mailto:${site.supportEmail}`}>{site.supportEmail}</a>.
       </p>

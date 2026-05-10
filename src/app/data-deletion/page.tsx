@@ -4,15 +4,15 @@ import { site } from "../content";
 
 export const metadata: Metadata = {
   title: "Data Deletion",
-  description: "How to request cancellation of a JavaRock device ID binding.",
+  description: "How to request cancellation of a JavaRock device identifier binding.",
 };
 
 export default function DataDeletionPage() {
   return (
     <LegalPage
-      eyebrow="Device ID binding"
+      eyebrow="Device binding"
       title="Data Deletion"
-      intro="Use this page to request cancellation of the Android device ID linked to your JavaRock login."
+      intro="Use this page to request cancellation of the device identifier linked to your JavaRock login."
     >
       <h2>How To Request Deletion</h2>
       <p>
@@ -23,14 +23,14 @@ export default function DataDeletionPage() {
       <ul>
         <li>Your JavaRock username.</li>
         <li>The Android device used with the app, if known.</li>
-        <li>Whether you want the device ID canceled or the full login record removed.</li>
+        <li>Whether you want the device identifier canceled or the full login record removed.</li>
       </ul>
 
       <h2>What We Delete</h2>
-      <p>When a device ID cancellation request is approved, we remove or reset:</p>
+      <p>When a device identifier cancellation request is approved, we remove or reset:</p>
       <ul>
-        <li>Stored Android device ID.</li>
-        <li>Any active access token linked to that device ID.</li>
+        <li>Stored device identifiers used for access control.</li>
+        <li>Any active access token linked to those device identifiers.</li>
       </ul>
       <p>
         If you request full access record removal, the admin-provided username record can also be
@@ -40,8 +40,8 @@ export default function DataDeletionPage() {
       <h2>Device Reset Option</h2>
       <p>
         If you are moving to a new phone, request a device reset. A reset removes the saved Android
-        device ID while keeping the admin-provided username available for reactivation on the new
-        phone.
+        device identifier while keeping the admin-provided username available for reactivation on
+        the new phone.
       </p>
 
       <h2>Timing</h2>
@@ -52,8 +52,8 @@ export default function DataDeletionPage() {
 
       <h2>After Deletion</h2>
       <p>
-        Once the device ID is canceled, the same login can be assigned again when it is next used on
-        an approved smartphone.
+        Once the device identifier is canceled, the same login can be assigned again when it is next
+        used on an approved smartphone.
       </p>
     </LegalPage>
   );
